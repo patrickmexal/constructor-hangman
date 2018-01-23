@@ -30,7 +30,7 @@ var askQuestion = function() {
     ]).then(function(answers) {
       // initializes the variable newguy to be a programmer object which will take
       // in all of the user's answers to the questions above
-      var word = new Programmer(
+      var guess = new Word(
         answers.name,
         answers.position,
         answers.age,
@@ -52,3 +52,5 @@ var askQuestion = function() {
 
 // call askquestion to run our code
 askQuestion();
+
+module.exports(constructorhangman.js);

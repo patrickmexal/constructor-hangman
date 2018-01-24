@@ -13,7 +13,7 @@ var guesses = 10;
 
 var randomItem = cryptidArray[Math.floor(Math.random() * cryptidArray.length)];
 
-process.setMaxListeners(100000);
+process.setMaxListeners(0);
 
 prompt.start();
 

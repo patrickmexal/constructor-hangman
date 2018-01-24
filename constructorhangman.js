@@ -1,6 +1,6 @@
 //var inquirer = require("inquirer");
 var prompt = require("prompt");
-var commandline = require("./commandline.js");
+//var commandline = require("./commandline.js");
 var inputs = [];
 var cryptidArray = [
 	"Yeti",
@@ -9,20 +9,31 @@ var cryptidArray = [
    	"Chupacabra",
    	"Kraken"
     ];
-
+var guesses = 10;
 
 var randomItem = cryptidArray[Math.floor(Math.random() * cryptidArray.length)];
 
+process.setMaxListeners(100000);
+
 prompt.start();
 
-function gamePlay() {
-	const initial = randomItem;
-	if (inputs = true) {
-		console.log(inputs);
-	} else {
-		console.log("A hit!");
-	}
-}
+for (var i = 10; i > 0; i--) {
+ 	guesses[i]
+prompt.get(["letter"], function (err, result) {
+    // 
+    // Log the results. 
+    // 
+    console.log("Command-line input received:");
+    console.log("  Letter " + result.letter);
+    inputs.push(result);
+  })
+};
+guesses--;
+
+
+
+
+
 /*function gameAction() {
 	if (inputs === randomItem.index) {
 		console.log(randomItem.match());
@@ -43,8 +54,8 @@ gameAction()*/
 	this.item10 = inputs[9]
 }*/
 
-var newArray = new ArrayConstructor("h", "a", "p", "p", "y");
+// var newArray = new ArrayConstructor("h", "a", "p", "p", "y");
 
-console.log(newArray);
+// console.log(newArray);
 console.log(randomItem);
 console.log(cryptidArray[3].length);

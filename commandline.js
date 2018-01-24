@@ -6,13 +6,14 @@ console.log("Welcome! Guess the word I am thinking of! Give me a letter to begin
 
 var askQuestion = function() {
   // if statement to ensure that our questions are only asked five times
-  if (count < 5) {
+  if (count < 10) {
     // runs inquirer and asks the user a series of questions whose replies are
     // stored within the variable answers inside of the .then statement
     inquirer.prompt([
       {
         name: "letter1",
-        message: "Guess a letter!"
+        message: "Guess a letter!",
+        value: ""
       }, {
         name: "letter2",
         message: "Guess a letter!"
@@ -27,7 +28,7 @@ var askQuestion = function() {
         name: "letter5",
         message: "Guess a letter!"
       }
-    ]).then(function(answers) {
+    ]).  then(function(answers) {
       // initializes the variable newguy to be a programmer object which will take
       // in all of the user's answers to the questions above
       var guess = new Word(
@@ -48,9 +49,9 @@ var askQuestion = function() {
   else {
     console.log("All questions asked");
   }
-};
+}; 
 
 // call askquestion to run our code
 askQuestion();
 
-module.exports(constructorhangman.js);
+
